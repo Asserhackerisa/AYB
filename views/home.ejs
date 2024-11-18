@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body class="dark-mode">
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="/images/ayb_logo.jpeg" alt="Logo" class="logo-img">
+            <h1>AYB</h1>
+        </div>
+        <nav class="nav-right">
+            <a href="/get_data?token=<%= token %>" class="cases-button">Cases</a>
+        </nav>
+    </header>
+
+    <!-- Welcome Section -->
+    <h2>Welcome <%= name %></h2>
+    <hr>
+
+    <!-- Cards Section -->
+    <section class="cards-container">
+        <a href="/form?street=الاباصيري&token=<%= token %>&name=<%= name %>" class="card red">
+            <img src="/images/street1.jpeg" alt="الاباصيري">
+            <span>الاباصيري</span>
+        </a>
+        <a href="/form?street=علي الصباغ&token=<%= token %>&name=<%= name %>" class="card blue">
+            <img src="/images/street2.jpeg" alt="علي الصباغ">
+            <span>علي الصباغ</span>
+        </a>
+        <a href="/form?street=علي يونس&token=<%= token %>&name=<%= name %>" class="card green">
+            <img src="/images/street3.jpeg" alt="علي يونس">
+            <span>علي يونس</span>
+        </a>
+        <a href="/form?street=مصطفي خاطر&token=<%= token %>&name=<%= name %>" class="card orange">
+            <img src="/images/street4.jpeg" alt="مصطفي خاطر">
+            <span>مصطفي خاطر</span>
+        </a>
+        <a href="/form?street=الشيخ محمود&token=<%= token %>&name=<%= name %>" class="card purple">
+            <img src="/images/street5.jpeg" alt="الشيخ محمود">
+            <span>الشيخ محمود</span>
+        </a>
+    </section>
+</body>
+</html>

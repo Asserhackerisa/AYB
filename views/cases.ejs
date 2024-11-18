@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cases</title>
+    <link rel="stylesheet" href="/cases.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="/images/ayb_logo.jpeg" alt="Logo" class="logo">
+            <h1>Cases Management System</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>All Cases</h1>
+        <% if (cases.length > 0) { %>
+            <section class="cards-container">
+                <% cases.forEach((caseItem) => { %>
+                    <div class="card">
+                        <h2>الشارع: <%= caseItem.الشارع %></h2>
+                        <p><strong>رقم العماره:</strong> <%= caseItem.رقم_العماره %></p>
+                        <p><strong>رقم الشقه:</strong> <%= caseItem.رقم_الشقه %></p>
+                        <p><strong>اسم الاب:</strong> <%= caseItem.اسم_الاب %></p>
+                        <p><strong>عدد البالغين:</strong> <%= caseItem.عدد_الباغين %></p>
+                        <p><strong>عدد الاطفال:</strong> <%= caseItem.عدد_الاطفال %></p>
+                        <p><strong>رقم الهاتف:</strong> <%= caseItem.رقم_الهاتف %></p>
+                        <p><strong>الدخل:</strong> <%= caseItem.الدخل %></p>
+                        <p><strong>الوظيفه:</strong> <%= caseItem.الوظيفه %></p>
+                        <% if (caseItem.ادويه) { %>
+                            <p><strong>ادويه:</strong> <%= caseItem.ادويه %></p>
+                        <% } %>
+                        <% if (caseItem.اجراء_طبي) { %>
+                            <p><strong>اجراء طبي:</strong> <%= caseItem.اجراء_طبي %></p>
+                        <% } %>
+                        <% if (caseItem.حالات_ادمان) { %>
+                            <p><strong>حالات ادمان:</strong> <%= caseItem.حالات_ادمان %></p>
+                        <% } %>
+                        
+                        <!-- Debt Fields -->
+                        <% if (caseItem.سبب_الدين1) { %>
+                            <p><strong>سبب الدين 1:</strong> <%= caseItem.سبب_الدين1 %></p>
+                            <p><strong>قيمة الدين 1:</strong> <%= caseItem.قيمه_الدين1 %></p>
+                            <p><strong>كم تبقي 1:</strong> <%= caseItem.كم_تبقي1 %></p>
+                            <p><strong>معاد استحقاق الدين 1:</strong> <%= caseItem.معاد_استحقاق_الدين1 %></p>
+                        <% } %>
+
+                        <% if (caseItem.سبب_الدين2) { %>
+                            <p><strong>سبب الدين 2:</strong> <%= caseItem.سبب_الدين2 %></p>
+                            <p><strong>قيمة الدين 2:</strong> <%= caseItem.قيمه_الدين2 %></p>
+                            <p><strong>كم تبقي 2:</strong> <%= caseItem.كم_تبقي2 %></p>
+                            <p><strong>معاد استحقاق الدين 2:</strong> <%= caseItem.معاد_استحقاق_الدين2 %></p>
+                        <% } %>
+
+                        <p><strong>المسجل بواسطة:</strong> <%= caseItem.by %></p>
+                        <p><strong>التقييم:</strong> <span class="rate-value"><%= caseItem.rate %></span></p>
+
+                    </div>
+                <% }); %>
+            </section>
+        <% } else { %>
+            <p>No cases available</p>
+        <% } %>
+    </div>
+</body>
+</html>

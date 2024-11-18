@@ -1,0 +1,204 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Header Styling */
+header {
+    background-color: #b30000;
+    color: #fff;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between; /* Space out the logo and the button */
+    align-items: center;
+    border-bottom: 2px solid #333;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Nav Styling */
+nav.nav-right {
+    text-align: right; /* Align the 'Cases' button to the right */
+}
+
+/* Button Styling */
+.cases-button {
+    display: inline-block;
+    padding: 0.75em 2em;
+    background: linear-gradient(135deg, #64b5f6, #81c784); /* Gradient Background */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    text-align: center;
+}
+
+/* Hover Effect */
+.cases-button:hover {
+    transform: translateY(-5px); /* Lift the button */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    background: linear-gradient(135deg, #2196f3, #66bb6a); /* Lighter gradient on hover */
+}
+
+/* Focus Effect (for accessibility) */
+.cases-button:focus {
+    outline: none;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.5); /* Blue focus ring */
+}
+
+/* Cards Container */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 2em;
+}
+
+/* Card Styling */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 300px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, background-color 0.3s;
+    padding: 1em;
+    gap: 1em;
+    text-align: center;
+}
+
+/* Image inside the Card */
+.card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Street Name */
+.card span {
+    font-size: 1em;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+/* Color Options for Cards */
+.card.red {
+    background-color: #e57373;
+}
+
+.card.blue {
+    background-color: #64b5f6;
+}
+
+.card.green {
+    background-color: #81c784;
+}
+
+.card.orange {
+    background-color: #ffb74d;
+}
+
+.card.purple {
+    background-color: #ba68c8;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    filter: brightness(1.15);
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+}
+
+.dark-mode header {
+    background-color: #333;
+}
+
+.dark-mode .card.red {
+    background-color: #c62828;
+}
+
+.dark-mode .card.blue {
+    background-color: #1565c0;
+}
+
+.dark-mode .card.green {
+    background-color: #2e7d32;
+}
+
+.dark-mode .card.orange {
+    background-color: #ef6c00;
+}
+
+.dark-mode .card.purple {
+    background-color: #6a1b9a;
+}
+
+/* Centering Heading */
+h1 {
+    text-align: center;
+}
+
+/* Welcome Section Styling */
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #64b5f6, #81c784); /* Gradient effect for the text */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    background-clip: text; /* Ensure the gradient is applied only to the text */
+    padding: 0.5em 0;
+    margin-top: 0.5em; /* Reduced the margin for a smaller space */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Soft shadow for the text */
+    animation: fadeIn 1.5s ease-out; /* Add fade-in animation */
+}
+
+/* Animation for Fade-in Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Form</title>
+    <link rel="stylesheet" href="/form.css">
+</head>
+<body>
+
+    <!-- Header with Logo -->
+    <header>
+        <div class="logo-container">
+            <img src="/images/ayb_logo.jpeg" alt="Logo" class="logo">
+        </div>
+        <h1>Data Form</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <!-- Form Container -->
+        <div class="form-container">
+            <h2>Enter Data for <%= street%></h2>
+            <form action="/submit" method="POST">
+                <label for="رقم_العماره">رقم العماره:</label>
+                <input type="number" id="رقم_العماره" name="رقم_العماره" required><br><br>
+
+                <label for="رقم_الشقه">رقم الشقه:</label>
+                <input type="number" id="رقم_الشقه" name="رقم_الشقه" required><br><br>
+
+                <label for="اسم_الاب">اسم الاب:</label>
+                <input type="text" id="اسم_الاب" name="اسم_الاب" required><br><br>
+
+                <label for="عدد_الباغين">عدد الباغين:</label>
+                <input type="number" id="عدد_الباغين" name="عدد_الباغين" required><br><br>
+
+                <label for="عدد_الاطفال">عدد الاطفال:</label>
+                <input type="number" id="عدد_الاطفال" name="عدد_الاطفال" required><br><br>
+
+                <label for="رقم_الهاتف">رقم الهاتف:</label>
+                <input type="text" id="رقم_الهاتف" name="رقم_الهاتف" required><br><br>
+
+                <label for="الدخل">الدخل:</label>
+                <input type="number" id="الدخل" name="الدخل" required><br><br>
+
+                <label for="الوظيفه">الوظيفه:</label>
+                <input type="text" id="الوظيفه" name="الوظيفه" required><br><br>
+
+                <label for="ادويه">ادويه:</label>
+                <input type="text" id="ادويه" name="ادويه"><br><br>
+
+                <label for="اجراء_طبي">اجراء طبي:</label>
+                <input type="text" id="اجراء_طبي" name="اجراء_طبي"><br><br>
+
+                <label for="حالات_ادمان">حالات ادمان:</label>
+                <input type="text" id="حالات_ادمان" name="حالات_ادمان"><br><br>
+
+            
+                <h3>الديون</h3>
+                <label for="سبب_الدين1">سبب الدين 1:</label>
+                <input type="text" id="سبب_الدين1" name="سبب_الدين1"><br><br>
+
+                <label for="قيمه_الدين1">قيمة الدين 1:</label>
+                <input type="number" id="قيمه_الدين1" name="قيمه_الدين1"><br><br>
+
+                <label for="كم_تبقي1">كم تبقى 1:</label>
+                <input type="number" id="كم_تبقي1" name="كم_تبقي1"><br><br>
+
+                <label for="معاد_استحقاق_الدين1">معاد استحقاق الدين 1:</label>
+                <input type="text" id="معاد_استحقاق_الدين1" name="معاد_استحقاق_الدين1"><br><br>
+                <hr>
+                <br>
+                <label for="سبب_الدين2">سبب الدين 2:</label>
+                <input type="text" id="سبب_الدين2" name="سبب_الدين2"><br><br>
+
+                <label for="قيمه_الدين2">قيمة الدين 2:</label>
+                <input type="number" id="قيمه_الدين2" name="قيمه_الدين2"><br><br>
+
+                <label for="كم_تبقي2">كم تبقى 2:</label>
+                <input type="number" id="كم_تبقي2" name="كم_تبقي2"><br><br>
+
+                <label for="معاد_استحقاق_الدين2">معاد استحقاق الدين 2:</label>
+                <input type="text" id="معاد_استحقاق_الدين2" name="معاد_استحقاق_الدين2"><br><br>
+
+                <label for="rate">Rate the case from 1-10</label>
+                <input type="number" id="rate" name="rate" required><br>
+
+               
+                <input type="hidden" id="الشارع" name="الشارع" value="<%= street %>">
+                <input type="hidden" id="by" name="by" value="<%= name %>">
+
+                
+
+
+
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

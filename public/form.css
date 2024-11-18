@@ -1,0 +1,121 @@
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #410505; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+}
+
+/* Header Styling */
+header {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 1em;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+/* Logo Styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Circular shape */
+    border: 3px solid #e0e0e0;
+}
+
+/* Main Content Styling */
+.main-content {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+}
+
+/* Form Container Styling */
+.form-container {
+    background-color: #1e1e1e;
+    padding: 2em;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    color: #e0e0e0;
+    font-size: 1.8em;
+    margin-bottom: 1em;
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5em;
+}
+
+/* Label and Input Styling */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #b0b0b0;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.6em;
+    margin-bottom: 1em;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: #333;
+    font-size: 1em;
+    color: #e0e0e0;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #64b5f6;
+    box-shadow: 0 0 5px rgba(100, 181, 246, 0.4);
+}
+
+/* Submit Button Styling */
+input[type="submit"] {
+    width: 100%;
+    padding: 0.8em;
+    background-color: #d20707;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #42a5f5;
+}
+
+/* Debt Section Styling */
+h3 {
+    color: #e0e0e0;
+    font-size: 1.4em;
+    margin-top: 1.5em;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5em;
+}
