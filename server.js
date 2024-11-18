@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 const mongoose = require("mongoose");
 require('dotenv').config();
-const url=process.env.url;
+const url="mongodb+srv://AYB:AYB__15.15@cluster0.z80zs.mongodb.net/AYB";
 const userRouter = require('./routes/user');
  
 
